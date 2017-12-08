@@ -1,0 +1,24 @@
+body {
+    background-image: url("pizza.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+}
+
+#order-form {
+    margin: 100px;
+    padding: 10px 10px 10px 10px;
+    background-image: url("flag.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: solid 5px #000;
+}
+
+h1 {
+    text-align: center;
+    font-variant: small-caps;
+}
+.container {
+    margin: 15px;
+}
+

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Gimme Pizza! P-I-Z-Z-A</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/gimmePizza.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <!-- ORDER FORM -->
+        <div id="order-form">  
+            <h1>Gimme Pizza!</h1>
+            
+            <!-- SIZES -->
+            <div class="container">
+                <h4>Decide your size!</h4>
+                <p>Personal ($6), Medium ($10), Large ($14), or Extra Large ($16)</p>
+                <form>
+                    <label class="radio-inline">
+                        <input id="personal" type="radio" name="optradio" checked>Personal
+                    </label>
+                    <label class="radio-inline">
+                        <input id="medium" type="radio" name="optradio">Medium
+                    </label>
+                    <label class="radio-inline">
+                        <input id="large" type="radio" name="optradio">Large
+                    </label>
+                    <label class="radio-inline">
+                        <input id="extraLarge" type="radio" name="optradio">Extra Large
+                    </label>
+                </form>
+            </div>
+            <!-- /SIZE -->
+
+            <!-- CRUST -->
+            <div class="container">
+                <h4>Pick your crust!</h4>
+                <p>Only $3 for our world famous cheese stuffed crust!</p>
+                <form>
+                    <label class="radio-inline">
+                        <input id="plain" type="radio" name="optradio" checked>Plain
+                    </label>
+                    <label class="radio-inline">
+                        <input id="garlicButter" type="radio" name="optradio">Garlic Butter
+                    </label>
+                    <label class="radio-inline">
+                        <input id="cheeseStuffed" type="radio" name="optradio">Cheese Stuffed
+                    </label>
+                    <label class="radio-inline">
+                        <input id="spicy" type="radio" name="optradio">Spicy
+                    </label>
+                    <label class="radio-inline">
+                        <input id="houseSpecial" type="radio" name="optradio">House Special
+                    </label>
+                </form>
+            </div>
+            <!-- /CRUST -->
+
+            <!-- SAUCE -->
+            <div class="container">
+                <h4>Select your sauce!</h4>
+                <p>Try our marinara!</p>
+                <form>
+                    <label class="radio-inline">
+                        <input id="marinara" type="radio" name="optradio" checked>Marinara
+                    </label>
+                    <label class="radio-inline">
+                        <input id="white" type="radio" name="optradio">White
+                    </label>
+                    <label class="radio-inline">
+                        <input id="barbecue" type="radio" name="optradio">Barbecue
+                    </label>
+                    <label class="radio-inline">
+                        <input id="noSauce" type="radio" name="optradio">No Sauce
+                    </label>
+                </form>
+            </div>
+            <!-- /SAUCE -->
+
+            <!-- CHEESE -->
+            <div class="container">
+                <h4>Choose your cheese!</h4>
+                <p>Only $3 for extra cheese!</p>
+                <form>
+                    <label class="radio-inline">
+                        <input id="regularCheese" type="radio" name="optradio" checked>Regular
+                    </label>
+                    <label class="radio-inline">
+                        <input id="noCheese" type="radio" name="optradio">No Cheese
+                    </label>
+                    <label class="radio-inline">
+                        <input id="extraCheese" type="radio" name="optradio">Extra Cheese
+                    </label>
+                </form>
+            </div>
+            <!-- /CHEESE -->
+
+            <!-- VEG -->
+            <div class="container">
+                <h4>Add veg!</h4>
+                <p>First one's on the house, then they're only $1 each!</p>
+                <form id="vegForm">
+                    <label class="checkbox-inline">
+                        <input id="tomatoes" type="checkbox" value="">Tomatoes
+                    </label>
+                    <label class="checkbox-inline">
+                        <input id="onions" type="checkbox" value="">Onions
+                    </label>
+                    <label class="checkbox-inline">
+                        <input id="olives" type="checkbox" value="">Olives
+                    </label>
+                    <label class="checkbox-inline">
+                        <input id="greenPeppers" type="checkbox" value="">Green Peppers
+                    </label>
+                    <label class="checkbox-inline">
+                        <input id="mushrooms" type="checkbox" value="">Mushrooms
+                    </label>
+                    <label class="checkbox-inline">
+                        <input id="pineapple" type="checkbox" value="">Pineapple
+                    </label>
+                    <label class="checkbox-inline">
+                        <input id="spinach" type="checkbox" value="">Spinach
+                    </label>
+                    <label class="checkbox-inline">
+                        <input id="jalapeno" type="checkbox" value="">Jalapeño
+                    </label>
+                </form>
+            </div>
+            <!-- /VEG -->
+
+            <!-- MEAT -->
+            <div class="container">
+                <h4>Add meat!</h4>
+                <p>First one's on the house, then they're only $1 each!</p>
+                <form id="meatForm">
+                    <label class="checkbox-inline">
+                        <input id="pepperoni" type="checkbox" value="">Pepperoni
+                    </label>
+                    <label class="checkbox-inline">
+                        <input id="sausage" type="checkbox" value="">Sausage
+                    </label>
+                    <label class="checkbox-inline">
+                        <input id="canadianBacon" type="checkbox" value="">Canadian Bacon
+                    </label>
+                    <label class="checkbox-inline">
+                        <input id="groundBeef" type="checkbox" value="">Ground Beef
+                    </label>
+                    <label class="checkbox-inline">
+                        <input id="anchovy" type="checkbox" value="">Anchovy
+                    </label>
+                    <label class="checkbox-inline">
+                        <input id="chicken" type="checkbox" value="">Chicken
+                    </label>
+                </form>
+            </div>
+            <!-- /MEAT -->
+            
+            <!-- PLACE ORDER -->
+            <div class="container">
+                <button id="order" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">Place your order!</button>
+                
+                <!-- RECEIPT MODAL -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Thank you for shopping at Gimme Pizza!</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Here is your itemized receipt: </p>
+                                <div id="size">
+                                    <h5>Size: </h5>
+                                </div>
+                                <div id="crust">
+                                    <br>
+                                    <h5>Crust: </h5>
+                                </div>
+                                <div id="sauce">
+                                    <br>
+                                    <h5>Sauce: </h5>
+                                </div>
+                                <div id="cheese">
+                                    <br>
+                                    <h5>Cheese: </h5>
+                                </div>
+                                <div id="veg">
+                                    <br>
+                                    <h5>Veg: </h5>
+                                </div>
+                                <div id="meat">
+                                    <br>
+                                    <h5>Meat: </h5>
+                                </div>
+                                <div id="total">
+                                    <br>
+                                    <h4>Grand Total: </h4>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="refresh" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /RECEIPT MODAL -->
+                
+            </div>
+            <!-- /PLACE ORDER -->
+            
+        </div>
+        <!-- /ORDER FORM -->
+
+        
+        <script>
+        $(document).ready(function () {
+            //INITIALIZE ALL CHOICES AS REFERENCE VARIABLES
+            var personal = $('#personal');
+            var medium = $('#medium');
+            var large = $('#large');
+            var extraLarge = $('#extraLarge');
+            var plain = $('#plain');
+            var garlicButter = $('#garlicButter');
+            var cheeseStuffed = $('#cheeseStuffed');
+            var spicy = $('#spicy');
+            var houseSpecial = $('#houseSpecial');
+            var marinara = $('#marinara');
+            var white = $('#white');
+            var barbecue = $('#barbecue');
+            var noSauce = $('#noSauce');
+            var regularCheese = $('#regularCheese');
+            var noCheese = $('#noCheese');
+            var extraCheese = $('#extraCheese');
+            var tomatoes = $('#tomatoes');
+            var onions = $('#onions');
+            var olives = $('#olives');
+            var greenPeppers = $('#greenPeppers');
+            var mushrooms = $('#mushrooms');
+            var pineapple = $('#pineapple');
+            var spinach = $('#spinach');
+            var jalapeno = $('#jalapeno');
+            var pepperoni = $('#pepperoni');
+            var sausage = $('#sausage');
+            var canadianBacon = $('#canadianBacon');
+            var groundBeef = $('#groundBeef');
+            var anchovy = $('#anchovy');
+            var chicken = $('#chicken');
+            
+            // MAKE PAGE RELOAD WHEN MODAL CLOSED
+            $('#refresh').click(function() {
+                location.reload();
+            });
+            
+            // BEGIN CLICK FUNCTION
+            $('#order').on('click',function () {
+                
+                // APPEND SIZE TO RECEIPT
+                if (personal.is(':checked')) {
+                    $("#size").append("&bull; Personal");
+                    var subSize = 6;
+                } else if (medium.is(':checked')) {
+                    $("#size").append("&bull; Medium");
+                    var subSize = 10;
+                } else if (large.is(':checked')) {
+                    $("#size").append("&bull; Large");
+                    var subSize = 14;
+                } else if (extraLarge.is(':checked')) {
+                    $("#size").append("&bull; Extra Large");
+                    var subSize = 16;
+                }
+            
+                // APPEND CRUST TO RECEIPT
+                if (plain.is(':checked')) {
+                    $("#crust").append("&bull; Plain");
+                    var subCrust = 0;
+                } else if (garlicButter.is(':checked')) {
+                    $("#crust").append("&bull; Garlic Butter");
+                    var subCrust = 0;
+                } else if (cheeseStuffed.is(':checked')) {
+                    $("#crust").append("&bull; Cheese Stuffed");
+                    var subCrust = 3;
+                } else if (spicy.is(':checked')) {
+                    $("#crust").append("&bull; Spicy");
+                    var subCrust = 0;
+                } else if (houseSpecial.is(':checked')) {
+                    $("#crust").append("&bull; House Special");
+                    var subCrust = 0;
+                }
+            
+                // APPEND SAUCE TO RECEIPT
+                if (marinara.is(':checked')) {
+                    $("#sauce").append("&bull; Marinara");
+                    var subSauce = 0;
+                } else if (white.is(':checked')) {
+                    $("#sauce").append("&bull; White");
+                    var subSauce = 0;
+                } else if (barbecue.is(':checked')) {
+                    $("#sauce").append("&bull; Barbecue");
+                    var subSauce = 0;
+                } else if (noSauce.is(':checked')) {
+                    $("#sauce").append("&bull; No Sauce");
+                    var subSauce = 0;
+                }
+            
+                // APPEND CHEESE TO RECEIPT
+                if (regularCheese.is(':checked')) {
+                    $("#cheese").append("&bull; Regular");
+                    var subCheese = 0;
+                } else if (noCheese.is(':checked')) {
+                    $("#cheese").append("&bull; No Cheese");
+                    var subCheese = 0;
+                } else if (extraCheese.is(':checked')) {
+                    $("#cheese").append("&bull; Extra Cheese");
+                    var subCheese = 3;
+                }
+            
+                // APPEND VEG TO RECEIPT
+                if (tomatoes.is(':checked')) {
+                    $("#veg").append("&bull; Tomatoes<br>");
+                }
+                if (onions.is(':checked')) {
+                    $("#veg").append("&bull; Onions<br>");
+                }
+                if (olives.is(':checked')) {
+                    $("#veg").append("&bull; Olives<br>");
+                }
+                if (greenPeppers.is(':checked')) {
+                    $("#veg").append("&bull; Green Peppers<br>");
+                }
+                if (mushrooms.is(':checked')) {
+                    $("#veg").append("&bull; Mushrooms<br>");
+                }
+                if (pineapple.is(':checked')) {
+                    $("#veg").append("&bull; Pineapple<br>");
+                }
+                if (spinach.is(':checked')) {
+                    $("#veg").append("&bull; Spinach<br>");
+                }
+                if (jalapeno.is(':checked')) {
+                    $("#veg").append("&bull; Jalapeño<br>");
+                }
+            
+                // APPEND MEAT TO RECEIPT
+                if (pepperoni.is(':checked')) {
+                    $("#meat").append("&bull; Pepperoni<br>");
+                }
+                if (sausage.is(':checked')) {
+                    $("#meat").append("&bull; Sausage<br>");
+                }
+                if (canadianBacon.is(':checked')) {
+                    $("#meat").append("&bull; Canadian Bacon<br>");
+                }
+                if (groundBeef.is(':checked')) {
+                    $("#meat").append("&bull; Ground Beef<br>");
+                }
+                if (anchovy.is(':checked')) {
+                    $("#meat").append("&bull; Anchovy<br>");
+                }
+                if (chicken.is(':checked')) {
+                    $("#meat").append("&bull; Chicken<br>");
+                }
+                
+                // CALCULATE AND APPEND ITEMIZED SUBTOTALS
+                    
+                    //SIZE SUBTOTAL
+                    $("#size").append("<br>size subtotal: $ " + subSize);
+                
+                    //CRUST SUBTOTAL
+                    $("#crust").append("<br>crust subtotal: $ " + subCrust);
+                
+                    //SAUCE SUBTOTAL
+                    $("#sauce").append("<br>sauce subtotal: $ " + subSauce);
+                
+                    //CHEESE SUBTOTAL
+                    $("#cheese").append("<br>cheese subtotal: $ " + subCheese);
+                
+                    //VEG SUBTOTAL
+                    var countVeg = $("#vegForm input:checked").length;
+                    if (countVeg < 2) {
+                        var subVeg = 0;
+                    } 
+                    else var subVeg = (countVeg - 1);
+                    $("#veg").append("veg subtotal: $ " + subVeg);
+                
+                    //MEAT SUBTOTAL
+                    var countMeat = $("#meatForm input:checked").length;
+                    if (countMeat < 2) {
+                        var subMeat = 0;
+                    } 
+                    else var subMeat = (countMeat - 1);
+                    $("#meat").append("meat subtotal: $ " + subMeat);
+                    
+                
+                // CALCULATE AND APPEND GRAND TOTAL
+                var grandTotal = (subSize + subCrust + subSauce + subCheese + subVeg + subMeat);
+                $("#total").append("$" + grandTotal);
+                
+                
+            }); // END CLICK FUNCTION
+            
+        });
+        </script>
+        
+    </body>
+</html>
